@@ -162,6 +162,9 @@ unsigned int Application::getWindowHeight() const {
 float Application::getTime() const {
 	return (float)glfwGetTime();
 }
+
+
+
 bool CDDS_FinitesStateMachApp::startup() { m_2dRenderer = new aie::Renderer2D(); 
 m_font = new aie::Font("../bin/font/consolas.ttf", 32);
 
