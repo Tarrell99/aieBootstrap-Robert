@@ -83,5 +83,8 @@
     <ClInclude Include="Gizmos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Project2D\Application2D.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

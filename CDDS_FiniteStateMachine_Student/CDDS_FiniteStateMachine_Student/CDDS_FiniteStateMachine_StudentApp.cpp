@@ -8,6 +8,8 @@
 #include "Condition.h"
 #include "Transition.h"
 #include <memory>
+#include"PlayerControlledState.h"
+#include "Application.h"
 
 CDDS_FiniteStateMachine_StudentApp::CDDS_FiniteStateMachine_StudentApp() : 
 	m_player(nullptr), m_enemy(nullptr)
@@ -61,4 +63,22 @@ void CDDS_FiniteStateMachine_StudentApp::draw() {
 
 	// done drawing sprites
 	m_2dRenderer->end();
+}
+bool CDDS_FiniteStateMachine_StudentApp::startup() {
+	m_2dRenderer = new aie::Renderer2D();
+	m_font = new aie::Font("../bin/font/consolas.ttf", 32);
+
+	// set up the player FSM and game object
+
+	FiniteStateMachine* playerFsm = new FiniteStateMachine(1);
+	playerFsm->addState(PLAYER_STATE_CONTROLLED, new PlayerControlledState());
+	playerFsm->forceState(PLAYER_STATE_CONTROLLED);
+
+	m_player = new GameObject(playerFsm);
+	std::shared_ptr<aie::Texture> playerFrame =
+		std::make_shared<aie::Texture>("../bin/textures/playerShip1_red.png");
+	m_player->addFrame(playerFrame, 1);
+	m_player->setPosition({ 150,450 });
+	m_player->setSpeed(200);
+	return true;
 }

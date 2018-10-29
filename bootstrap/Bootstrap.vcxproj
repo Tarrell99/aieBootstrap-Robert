@@ -183,6 +183,7 @@
     <ClInclude Include="..\dependencies\imgui\imconfig.h" />
     <ClInclude Include="..\dependencies\imgui\imgui.h" />
     <ClInclude Include="..\dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="..\Project2D\Application2D.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Gizmos.h" />

@@ -21,9 +21,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DragonRPG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application2D.h">
+    <ClInclude Include="DragonRPG.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
